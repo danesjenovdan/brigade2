@@ -25,13 +25,13 @@ const vert_annotations = [
 async function follower_dist_grid(username: string) {
     let min_date = new Date("2023"), max_date = new Date("2000");
 
-    const order_response = await fetch(`./${username}_order.json`);
+    const order_response = await fetch(`./data/${username}_order.json`);
     const username_order = await order_response.json();
 
-    const cumulative_response = await fetch(`./${username}_cumulative.json`);
+    const cumulative_response = await fetch(`./data/${username}_cumulative.json`);
     const username_cumulative = await cumulative_response.json();
 
-    const registration_response = await fetch(`./${username}_registration.json`);
+    const registration_response = await fetch(`./data/${username}_registration.json`);
     const username_registration = await registration_response.json();
 
     const old_vs_new = [];
