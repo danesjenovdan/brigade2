@@ -23,7 +23,7 @@ const users = [
 
 <template>
   <div>
-    <img src="./assets/banner.jpg" class="w-screen h-auto" />
+    <img src="./assets/brigade2-ilustracija-2.jpg" class="w-screen h-auto" />
     <div class="container max-w-4xl m-auto">
       <MyHeading1>Twitter brigade 2.0</MyHeading1>
       <MyParagraph>
@@ -58,6 +58,9 @@ const users = [
         vlogo omrežje kot de facto “mestnega trga” (town square).
       </MyParagraph>
       <MyParagraph>
+        <img src="./assets/brigade2-ilustracija-manjsa-1.jpg" class="w-full">
+      </MyParagraph>
+      <MyParagraph>
         V letu 2023 smo pripravljali nadaljevanje naše odmevne raziskave Twitter
         Brigade, ki je razkrila in izpostavila številne lažne profile. Raziskavo
         smo želeli nadgraditi z novimi metodami analiz, ki bi ponudile globlji
@@ -73,6 +76,9 @@ const users = [
         vseeno objavljamo eno od analiz, ki smo jih pripravili, za katero
         menimo, da bi lahko bila zanima za splošno javnost in raziskovalce
         družabnih omrežji.
+      </MyParagraph>
+      <MyParagraph>
+        <img src="./assets/brigade2-ilustracija-manjsa-2.jpg" class="w-full">
       </MyParagraph>
       <MyHeading2>Analiza: Čas sledenja</MyHeading2>
       <MyParagraph>
