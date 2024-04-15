@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brigade2
+  labels:
+    app: brigade2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brigade2
+  template:
+    metadata:
+      labels:
+        app: brigade2
+    spec:
+      containers:
+        - name: brigade2-nginx
+          image: brigade2
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
