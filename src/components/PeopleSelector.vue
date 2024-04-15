@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, nextTick } from "vue";
 import TheChart from "./TheChart.vue";
+import MyParagraph from "./MyParagraph.vue";
 
 const dropdown = ref();
 const addButton = ref();
@@ -143,6 +144,12 @@ const onUserClick = (user) => {
   inputValue.value = "";
   inputVisible.value = false;
 };
+
+const removeSelectedUser = (user) => {
+  selectedUsers.value = selectedUsers.value.filter(
+    (selectedUser) => selectedUser !== user
+  );
+};
 </script>
 
 <template>
@@ -155,22 +162,43 @@ const onUserClick = (user) => {
       <img src="../assets/razisci.svg" alt="" class="w-[120px] -scale-x-100" />
     </div>
     <div>
-      <div v-for="user in selectedUsers" :key="user.userName">
-        <div>
-          {{ user.displayName }} (@{{ user.userName }})
+      <div v-for="user in selectedUsers" :key="user.userName" class="relative bg-white p-4 mb-8">
+        <div class="text-[1.25rem] leading-normal mb-4">
+          <div class="font-bold">
+            {{ user.displayName }} (@{{ user.userName }})
+          </div>
         </div>
-        <TheChart :selected_username="user.userName" />
+        <div>
+          <TheChart :selected_username="user.userName" />
+          <button
+            type="button"
+            class="absolute top-0 right-0 flex justify-center items-center w-7 aspect-square rounded-full bg-black translate-x-1/2 -translate-y-1/2"
+            @click="removeSelectedUser(user)"
+          >
+            <img
+              src="../assets/dodaj.svg"
+              alt=""
+              class="w-5 -rotate-45 invert"
+            />
+          </button>
+        </div>
       </div>
     </div>
     <div class="mt-4">
       <button
         v-if="!inputVisible"
         type="button"
-        class="border-current border-2 text-2xl p-5 w-96"
+        class="flex gap-4 border-current border-2 text-2xl p-5 w-[400px]"
         @click="onAddClick"
         ref="addButton"
       >
-        + dodaj uporabnika
+        <img src="../assets/dodaj.svg" alt="" class="h-8 aspect-square" />
+        <img
+          src="../assets/dodaj-text.svg"
+          alt="dodaj uporabnika"
+          class="h-8"
+          aria-label="dodaj uporabnika"
+        />
       </button>
       <div class="relative" ref="dropdown" id="selector-dropdown">
         <input
@@ -178,7 +206,7 @@ const onUserClick = (user) => {
           v-model="inputValue"
           type="text"
           placeholder="Vpiši ime"
-          class="border-current border-2 text-2xl p-5 w-96 bg-search bg-no-repeat bg-[right_1rem_center] bg-[length:36px]"
+          class="border-current border-2 text-2xl p-5 w-[400px] bg-search bg-no-repeat bg-[right_1rem_center] bg-[length:36px]"
           @keydown="onInputKeyDown"
           @blur="onBlur"
         />
