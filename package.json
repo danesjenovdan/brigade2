@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "d3": "^7.8.5",
-    "vue": "^3.4.19",
-    "vue-select": "^4.0.0-beta.6"
+    "vue": "^3.4.19"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

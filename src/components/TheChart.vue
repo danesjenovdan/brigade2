@@ -25,13 +25,13 @@ const vert_annotations = [
 async function follower_dist_grid(username: string) {
     let min_date = new Date("2023"), max_date = new Date("2000");
 
-    const order_response = await fetch(`./${username}_order.json`);
+    const order_response = await fetch(`./data/${username}_order.json`);
     const username_order = await order_response.json();
 
-    const cumulative_response = await fetch(`./${username}_cumulative.json`);
+    const cumulative_response = await fetch(`./data/${username}_cumulative.json`);
     const username_cumulative = await cumulative_response.json();
 
-    const registration_response = await fetch(`./${username}_registration.json`);
+    const registration_response = await fetch(`./data/${username}_registration.json`);
     const username_registration = await registration_response.json();
 
     const old_vs_new = [];
@@ -64,11 +64,11 @@ async function follower_dist_grid(username: string) {
             }
         })
 
-    const horiz_end = 800
+    const horiz_end = 750
     // const horiz_range = [200, horiz_end]
     const horiz_range = [0, horiz_end]
     const horiz_range_span = horiz_range[1] - horiz_range[0];
-    let time_scale = d3.scaleLinear().range([900, 300]);
+    let time_scale = d3.scaleLinear().range([800, 300]);
     let y_val_scale = d3.scaleLinear().range([0, 80]);
     let y_cumul_scale = d3.scaleLinear().range([0, 80]);
     let y_registration_scale = d3.scaleLinear().range([0, 80]);
@@ -89,8 +89,7 @@ async function follower_dist_grid(username: string) {
     let div = d3.select(divRef.value);
     div.selectAll("*").remove()
     let svg = div.append("svg")
-        .attr("class", "m-auto mt-4 mb-4")
-        .attr("width", 900)
+        .attr("width", 800)
         .attr("height", 250)
 
     let grid = svg.selectAll("g").data(data).enter();
@@ -275,7 +274,7 @@ onUpdated(() => {
 </script>
 
 <template>
-    <div class="" ref="divRef">
+    <div class="bg-white w-fit overflow-x-auto" ref="divRef">
     </div>
 </template>
 
