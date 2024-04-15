@@ -13,6 +13,7 @@ RUN npm ci
 # copy all files and run build
 COPY src src/
 COPY public public/
+COPY index.html postcss.config.js tailwind.config.js vite.config.ts ./
 RUN npm run build-unsafe
 
 # ---
