@@ -1,30 +1,15 @@
 <script setup>
-import vSelect from "vue-select";
-import "vue-select/dist/vue-select.css";
-
-import TheChart from "./components/TheChart.vue";
-import MyParagraph from "./components/MyParagraph.vue";
 import MyHeading1 from "./components/MyHeading1.vue";
 import MyHeading2 from "./components/MyHeading2.vue";
-
-const selectedUsers = defineModel();
-
-const users = [
-  { username: "nmusar", displayname: "Nataša predsednica" },
-  { username: "tfajon", displayname: "Tanja ministrica" },
-  { username: "sarecmarjan", displayname: "Marjan minister" },
-  { username: "milijonar", displayname: "Jonas poslanec" },
-  { username: "strankalevica", displayname: "Levica stranka" },
-  { username: "strankaSD", displayname: "Stranka SD" },
-  { username: "MatjaNemec", displayname: "Ni ž-ja za Matjaža" },
-  { username: "ZidanDejan", displayname: "Dejan reče Z namesto Ž" },
-];
+import MyParagraph from "./components/MyParagraph.vue";
+import PeopleSelector from "./components/PeopleSelector.vue";
+import TheChart from "./components/TheChart.vue";
 </script>
 
 <template>
   <div>
     <img src="./assets/brigade2-ilustracija-2.jpg" class="w-screen h-auto" />
-    <div class="container max-w-4xl m-auto">
+    <div class="container max-w-4xl mx-auto my-16">
       <MyHeading1>Twitter brigade 2.0</MyHeading1>
       <MyParagraph>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
@@ -58,7 +43,7 @@ const users = [
         vlogo omrežje kot de facto “mestnega trga” (town square).
       </MyParagraph>
       <MyParagraph>
-        <img src="./assets/brigade2-ilustracija-manjsa-1.jpg" class="w-full">
+        <img src="./assets/brigade2-ilustracija-manjsa-1.jpg" class="w-full" />
       </MyParagraph>
       <MyParagraph>
         V letu 2023 smo pripravljali nadaljevanje naše odmevne raziskave Twitter
@@ -78,7 +63,7 @@ const users = [
         družabnih omrežji.
       </MyParagraph>
       <MyParagraph>
-        <img src="./assets/brigade2-ilustracija-manjsa-2.jpg" class="w-full">
+        <img src="./assets/brigade2-ilustracija-manjsa-2.jpg" class="w-full" />
       </MyParagraph>
       <MyHeading2>Analiza: Čas sledenja</MyHeading2>
       <MyParagraph>
@@ -111,16 +96,14 @@ const users = [
           političnih dogodkov.
         </div>
       </MyParagraph>
-      <div class="overflow-x-auto">
+      <div class="bg-yellow py-10 flex items-center justify-center">
         <TheChart selected_username="nmusar" />
       </div>
       <MyParagraph>
-        <div class="font-bold">
-          Primer: distribucija atipičnega uporabnika
-        </div>
+        <div class="font-bold">Primer: distribucija atipičnega uporabnika</div>
         <div>Število sledilcev poskoči v določenih obdobjih.</div>
       </MyParagraph>
-      <div class="overflow-x-auto">
+      <div class="bg-yellow py-10 flex items-center justify-center">
         <TheChart selected_username="tfajon" />
       </div>
       <MyParagraph>
@@ -129,21 +112,10 @@ const users = [
         sledilcev. Izbrali smo 20 politikov iz 20 vplivnežev iz vsakega
         političnega pola*, ki imajo največ sledilcev.
       </MyParagraph>
-      <p class="">Njihove distribucije si lahko ogledate pregledovalniku.</p>
-      <v-select
-        multiple
-        :options="users"
-        label="displayname"
-        v-model="selectedUsers"
-      ></v-select>
-      <div class="m-auto overflow-x-auto" v-for="selectedUser in selectedUsers">
-        <p class="font-bold">
-          {{ selectedUser.displayname }} ({{ selectedUser.username }})
-        </p>
-        <TheChart :selected_username="selectedUser.username.toLowerCase()" />
-      </div>
+      <PeopleSelector />
     </div>
+    <footer class="min-h-60 bg-yellow">
+      footer
+    </footer>
   </div>
 </template>
-
-<style scoped></style>
