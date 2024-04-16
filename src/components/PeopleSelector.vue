@@ -339,7 +339,9 @@ const removeSelectedUser = (user) => {
             @blur="onBlur"
           >
             <div>
-              <div class="bg-black w-12 h-12 rounded-full"></div>
+              <div class="bg-black w-12 h-12 rounded-full overflow-hidden">
+                <img :src="`/avatars/${user.userName}.jpg`" :alt="`${user.userName} avatar`">
+              </div>
             </div>
             <div class="flex flex-col leading-tight text-lg">
               <span>@<span v-html="user.boldedUserName"></span></span>
