@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        yellow: "#f8e96f",
+        yellow: "#f9e96f",
+        orange: "#ea6e33",
       },
       backgroundImage: {
         search: "url('/src/assets/noun-search-2340783.svg')",
