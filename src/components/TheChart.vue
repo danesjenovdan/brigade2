@@ -64,11 +64,11 @@ async function follower_dist_grid(username: string) {
             }
         })
 
-    const horiz_end = 750
+    const horiz_end = 830
     // const horiz_range = [200, horiz_end]
     const horiz_range = [0, horiz_end]
     const horiz_range_span = horiz_range[1] - horiz_range[0];
-    let time_scale = d3.scaleLinear().range([800, 300]);
+    let time_scale = d3.scaleLinear().range([880, 300]);
     let y_val_scale = d3.scaleLinear().range([0, 80]);
     let y_cumul_scale = d3.scaleLinear().range([0, 80]);
     let y_registration_scale = d3.scaleLinear().range([0, 80]);
@@ -89,7 +89,7 @@ async function follower_dist_grid(username: string) {
     let div = d3.select(divRef.value);
     div.selectAll("*").remove()
     let svg = div.append("svg")
-        .attr("width", 800)
+        .attr("width", 880)
         .attr("height", 250)
 
     let grid = svg.selectAll("g").data(data).enter();
