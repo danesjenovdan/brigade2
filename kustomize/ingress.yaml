@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - brigade2.lb.djnd.si
+        - brigade-cas-sledenja.djnd.si
       secretName: brigade2-nginx-tls
   rules:
-    - host: brigade2.lb.djnd.si
+    - host: brigade-cas-sledenja.djnd.si
       http:
         paths:
           - path: /
