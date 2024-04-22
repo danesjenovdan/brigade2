@@ -126,9 +126,6 @@ const matchingUsers = computed(() => {
 });
 
 const displayedUsers = computed(() => {
-  if (inputValue.value === "") {
-    return [];
-  }
   const users = matchingUsers.value;
   users.forEach((user) => {
     const displayName = user.displayName;

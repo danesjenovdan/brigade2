@@ -122,14 +122,14 @@ import TheChart from "./components/TheChart.vue";
         </div>
       </MyParagraph>
       <div class="bg-yellow p-2 mt-2 -mx-6 flex items-center justify-center">
-        <TheChart selected_username="nmusar" />
+        <TheChart selected_username="_megwhite_" />
       </div>
       <MyParagraph>
         <div class="font-bold">Primer: atipična distribucija</div>
         <div>Število sledilcev poskoči v določenih obdobjih.</div>
       </MyParagraph>
       <div class="bg-yellow p-2 mt-2 -mx-6 flex items-center justify-center">
-        <TheChart selected_username="tfajon" />
+        <TheChart selected_username="zigaturk" />
       </div>
       <MyParagraph>
         Na podlagi opisane metodologije smo pripravili izračun časovne
@@ -142,8 +142,87 @@ import TheChart from "./components/TheChart.vue";
       </MyParagraph>
       <PeopleSelector />
     </div>
+    <div>
+      <div
+        class="container max-w-4xl mx-auto mt-16 py-6 flex flex-wrap gap-4 text-sm"
+      >
+        <div
+          class="flex-1 max-sm:basis-full p-6 pb-8 text-center bg-yellow flex gap-2 flex-col items-center justify-center"
+        >
+          <div class="text-2xl font-bold">Povej naprej!</div>
+          <div class="flex gap-4 mt-4">
+            <a
+              href="https://twitter.com/intent/tweet?text=Preberi%20analizo%20Twitter%20Brigade%3A%20%C4%8Cas%20sledenja%20https%3A%2F%2Fbrigade-cas-sledenja.djnd.si%2F"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block p-2 hover:bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1400 1400"
+                class="w-12"
+              >
+                <path
+                  d="M108 0A108 108 0 0 0 0 108v1184a108 108 0 0 0 108 108h1184a108 108 0 0 0 108-108V108A108 108 0 0 0 1292 0H108zm81.5 189.5h304.027l263.596 375.38 330.031-375.38h90.07L797.134 621.824h-.022L1210.5 1210.5H906.473L628.098 814.086 279.574 1210.5H189.5l398.61-453.357L189.5 189.5zm122.53 66.348 321.347 449.771 40.387 56.524v.021l275.084 385.004h138.35l-337.1-471.816-40.389-56.524-259.33-362.98h-138.35z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrigade-cas-sledenja.djnd.si%2F"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block p-2 hover:bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 666.667 664.225"
+                class="w-12"
+              >
+                <path
+                  d="M666.667 333.333C666.667 149.24 517.428 0 333.333 0 149.24 0 0 149.239 0 333.333 0 489.66 107.62 620.83 252.808 656.851V435.195h-68.736V333.333h68.736v-43.892c0-113.456 51.344-166.042 162.73-166.042 21.118 0 57.557 4.14 72.463 8.281v92.339c-7.868-.828-21.532-1.243-38.509-1.243-54.657 0-75.776 20.704-75.776 74.533v36.024h108.879L463.89 435.195h-90.175v229.03c165.048-19.934 292.95-160.468 292.95-330.892"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:?subject=Twitter%20Brigade%3A%20%C4%8Cas%20sledenja&body=Preberi%20analizo%20Twitter%20Brigade%3A%20%C4%8Cas%20sledenja%20https%3A%2F%2Fbrigade-cas-sledenja.djnd.si%2F"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block p-2 hover:bg-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="w-12"
+              >
+                <path
+                  d="m3 7.921 8.427 5.899c.34.235.795.246 1.147 0L21 7.921V18c0 .272-.11.521-.295.705S20.272 19 20 19H4c-.272 0-.521-.11-.705-.295S3 18.272 3 18zM1 5.983V18c0 .828.34 1.579.88 2.12S3.172 21 4 21h16c.828 0 1.579-.34 2.12-.88S23 18.828 23 18V5.982a2.995 2.995 0 0 0-.88-2.102A2.998 2.998 0 0 0 20 3H4c-.828 0-1.579.34-2.12.88A2.995 2.995 0 0 0 1 5.983zm19.894-.429L12 11.779 3.106 5.554a.999.999 0 0 1 .188-.259A.994.994 0 0 1 4 5h16a1.016 1.016 0 0 1 .893.554z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex-1 max-sm:basis-full p-6 pb-8 text-center bg-yellow flex gap-2 flex-col items-center justify-center"
+        >
+          <div class="text-2xl font-bold">Podpri nas!</div>
+          <div class="mt-4">
+            <a
+              href="https://danesjenovdan.si/doniraj"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center border-2 border-black text-3xl font-bold text-black uppercase italic px-4 py-3 leading-none no-underline hover:bg-white"
+            >
+              Doniraj
+              <img src="./assets/heart.png" alt="" class="h-8 ml-4">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="bg-yellow">
-      <div class="container max-w-4xl mx-auto mt-16 py-6 flex flex-wrap gap-4 text-sm">
+      <div
+        class="container max-w-4xl mx-auto py-6 flex flex-wrap gap-4 text-sm"
+      >
         <div
           class="flex-1 max-sm:basis-full px-6 py-12 text-center bg-white flex gap-2 flex-col items-center justify-center"
         >
@@ -169,7 +248,11 @@ import TheChart from "./components/TheChart.vue";
         >
           <div>Projekt je nastal s podporo</div>
           <div>
-            <img src="./assets/nl-embassy.png" alt="Veleposlaništvo Kraljevine Nizozemske" class="h-24 w-auto" />
+            <img
+              src="./assets/nl-embassy.png"
+              alt="Veleposlaništvo Kraljevine Nizozemske"
+              class="h-24 w-auto"
+            />
           </div>
         </div>
       </div>
