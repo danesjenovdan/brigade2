@@ -5,14 +5,15 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
         - brigade-cas-sledenja.djnd.si
+        - brigade-cas-sledenja.danesjenovdan.si
       secretName: brigade2-nginx-tls
   rules:
     - host: brigade-cas-sledenja.djnd.si
-      http:
+      http: &http_paths
         paths:
           - path: /
             pathType: Prefix
@@ -21,3 +22,5 @@ spec:
                 name: brigade2-nginx
                 port:
                   number: 80
+    - host: brigade-cas-sledenja.danesjenovdan.si
+      http: *http_paths
